@@ -1,0 +1,32 @@
+# Emacs package directories
+elpa/
+eln-cache/
+straight/
+tree-sitter/
+
+# Emacs state
+auto-save-list/
+backups/
+tramp/
+var/
+eshell/history
+eshell/lastdir
+custom.el
+
+# Caches
+.cache/
+url/
+bookmark
+recentf
+projectile-bookmarks.eld
+projectile.cache
+
+# Compiled files
+*.elc
+*.eln
+
+# Temporary files
+*~
+\#*\#
+.\#*
+

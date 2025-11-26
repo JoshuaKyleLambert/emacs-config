@@ -1,0 +1,36 @@
+;;; window.el --- save/restore window size and position
+
+(setq desktop-path '("~/.emacs.d/desktop/"))
+(setq desktop-dirname "~/.emacs.d/desktop/")
+(setq desktop-save 'if-exists)
+(desktop-save-mode 1)
+
+(defun my/save-frame-geom ()
+  (when (display-graphic-p)
+    (with-temp-file (expand-file-name "frame-geom.el" desktop-dirname)
+      (prin1
+       (list (frame-parameter nil 'left)
+             (frame-parameter nil 'top)
+             (frame-width)
+             (frame-height)
+             (frame-parameter nil 'fullscreen))
+       (current-buffer)))))
+
+(defun my/load-frame-geom ()
+  (let ((f (expand-file-name "frame-geom.el" desktop-dirname)))
+    (when (file-exists-p f)
+      (with-temp-buffer
+        (insert-file-contents f)
+        (let ((vals (read (current-buffer))))
+          (setq default-frame-alist
+                `((left . ,(nth 0 vals))
+                  (top . ,(nth 1 vals))
+                  (width . ,(nth 2 vals))
+                  (height . ,(nth 3 vals))
+                  (fullscreen . ,(nth 4 vals)))))))))
+
+(add-hook 'emacs-startup-hook #'my/load-frame-geom)
+(add-hook 'kill-emacs-hook #'my/save-frame-geom)
+
+(provide 'window)
+
