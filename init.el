@@ -10,6 +10,7 @@
 (load "clojure.el")
 (load "repl.el")
 (load "tramp-config.el")
+(load "which-key-config.el")
 
 ;; --- Custom file ---
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))

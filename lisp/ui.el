@@ -18,6 +18,19 @@
 (use-package all-the-icons
   :if (display-graphic-p))
 
+(use-package recentf
+  :init
+  (setq recentf-max-menu-items 25
+        recentf-max-saved-items 200)
+  :config
+  (recentf-mode 1))
 
-(provide 'ui)
+;; Line numbers everywhere programming happens
+(setq display-line-numbers-type 't)
+(setq display-line-numbers-width-start t)
+(dolist (hook '(prog-mode-hook
+                clojure-ts-mode-hook))
+  (add-hook hook #'global-display-line-numbers-mode))
+
+(Provide 'ui)
 
