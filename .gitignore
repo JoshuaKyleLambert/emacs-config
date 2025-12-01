@@ -20,6 +20,7 @@ bookmark
 recentf
 projectile-bookmarks.eld
 projectile.cache
+transient/
 
 # Compiled files
 *.elc

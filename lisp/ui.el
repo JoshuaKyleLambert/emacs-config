@@ -32,5 +32,5 @@
                 clojure-ts-mode-hook))
   (add-hook hook #'global-display-line-numbers-mode))
 
-(Provide 'ui)
+(provide 'ui)
 
