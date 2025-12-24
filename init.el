@@ -11,6 +11,12 @@
 (load "repl.el")
 (load "tramp-config.el")
 (load "which-key-config.el")
+(load "ai.el") 
+(load "magit.el")
+
+
+
+(load "keybindings.el")
 
 ;; --- Custom file ---
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
