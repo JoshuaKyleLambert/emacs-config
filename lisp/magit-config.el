@@ -13,3 +13,5 @@
          (dired-mode . diff-hl-dired-mode))
   :config
   (diff-hl-flydiff-mode))
+
+(provide 'magit-config)
