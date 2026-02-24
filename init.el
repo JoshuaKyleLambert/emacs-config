@@ -12,7 +12,7 @@
 (load "tramp-config.el")
 (load "which-key-config.el")
 (load "ai.el") 
-(load "magit.el")
+(require 'magit-config)
 
 
 
