@@ -11,6 +11,10 @@
               (setq treesit-font-lock-level 4)
               (subword-mode 1))))
 
+(add-hook 'clojure-ts-mode-hook
+          (lambda ()
+            (setq-local indent-tabs-mode nil)))
+
 ;; For installations that still have clojure-mode, keep it in the list too:
 (add-to-list 'auto-mode-alist '("\\.clj\\'" . clojure-mode) t)
 

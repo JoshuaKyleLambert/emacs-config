@@ -31,3 +31,6 @@ transient/
 \#*\#
 .\#*
 
+#Other directories
+projects
+tramp
