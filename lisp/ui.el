@@ -34,3 +34,14 @@
 
 (provide 'ui)
 
+
+;;
+(global-prettify-symbols-mode 1)
+
+(when (display-graphic-p)
+  (dolist (font '("JetBrainsMono Nerd Font Mono"
+                  "JetBrainsMono Nerd Font"
+                  "JetBrainsMono NF"))
+    (when (member font (font-family-list))
+      (set-face-attribute 'default nil :family font :height 120)
+      (cl-return))))
