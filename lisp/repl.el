@@ -2,9 +2,10 @@
 (use-package cider
   :defer t
   :config
-  (setq cider-repl-display-help-banner nil
+  (setq cider-repl-display-help-banner t
         cider-repl-use-pretty-printing t
-        nrepl-log-messages t))
+        nrepl-log-messages t
+        cider-clojure-cli-aliases ":dev"))
 
 (defun my/clojure-project-root ()
   "Return a sensible project root (project / projectile)."
@@ -24,8 +25,8 @@ Safe: only attempts jack-in when not already connected."
         (cider-jack-in nil)))))
 
 ;; Attach auto-start to both ts-mode and legacy mode
-(add-hook 'clojure-ts-mode-hook #'my/cider-auto-start-on-open)
-(add-hook 'clojure-mode-hook #'my/cider-auto-start-on-open)
+;;(add-hook 'clojure-ts-mode-hook #'my/cider-auto-start-on-open)
+;;(add-hook 'clojure-mode-hook #'my/cider-auto-start-on-open)
 
 ;; Useful keys
 (global-set-key (kbd "C-c r") 'cider-refresh)

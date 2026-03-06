@@ -30,4 +30,5 @@
 
 ;; Optional: also put backup~ files in one place
 (setq backup-directory-alist
-      `((".*" . ,(expand-file-name "~/.emacs.d/backups/"))))
+      `(("." . ,(expand-file-name "~/.emacs.d/backups/"))))
+

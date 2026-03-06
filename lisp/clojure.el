@@ -35,5 +35,7 @@
     (sp-local-pair "[" "]")
     (sp-local-pair "(" ")")))
 
+(setq cider-clojure-cli-aliases ":dev")
+
 (provide 'clojure)
 
