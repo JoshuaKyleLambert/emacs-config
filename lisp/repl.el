@@ -5,7 +5,8 @@
   (setq cider-repl-display-help-banner t
         cider-repl-use-pretty-printing t
         nrepl-log-messages t
-        cider-clojure-cli-aliases ":dev"))
+        cider-clojure-cli-aliases ":dev"
+        cider-eldoc-display-context-dependent-info t))
 
 (defun my/clojure-project-root ()
   "Return a sensible project root (project / projectile)."
