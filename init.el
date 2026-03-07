@@ -12,6 +12,7 @@
 (load "tramp-config.el")
 (load "which-key-config.el")
 (load "ai.el") 
+(load "my-treesitter-config.el")
 (require 'magit-config)
 
 

@@ -3,6 +3,12 @@
 ;; Ensure clojure-ts-mode is used for .clj/.cljs/.cljc if treesit is available,
 ;; otherwise fall back to clojure-mode.
 (when (and (fboundp 'treesit-available-p) (treesit-available-p))
+  ;; clojure-ts-mode's grammar auto-check can warn repeatedly when optional
+  ;; grammars (like markdown-inline) are version-mismatched.
+  (setq clojure-ts-ensure-grammars nil)
+  ;; Avoid warnings when an outdated markdown-inline grammar is installed.
+  ;; This parser is optional in clojure-ts-mode.
+  (setq clojure-ts-use-markdown-inline nil)
   (add-to-list 'auto-mode-alist '("\\.clj\\'"  . clojure-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.cljs\\'" . clojurescript-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.cljc\\'" . clojurec-ts-mode))
@@ -38,4 +44,3 @@
 (setq cider-clojure-cli-aliases ":dev")
 
 (provide 'clojure)
-
