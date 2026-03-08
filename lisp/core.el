@@ -23,6 +23,11 @@
 (eval-when-compile (require 'use-package))
 (setq use-package-always-ensure t)
 
+;; Auto-reload files changed outside Emacs (git updates, external edits, etc).
+(setq auto-revert-verbose nil
+      global-auto-revert-non-file-buffers t)
+(global-auto-revert-mode 1)
+
 
 ;; Put ALL auto-save files in /tmp/, regardless of buffer default-directory
 (setq auto-save-file-name-transforms
@@ -31,4 +36,3 @@
 ;; Optional: also put backup~ files in one place
 (setq backup-directory-alist
       `(("." . ,(expand-file-name "~/.emacs.d/backups/"))))
-
