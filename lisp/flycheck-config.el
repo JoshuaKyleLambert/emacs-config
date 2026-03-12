@@ -6,4 +6,4 @@
   :ensure t
   :after flycheck)
 
-(Provide 'flycheck-config)
+(provide 'flycheck-config)
