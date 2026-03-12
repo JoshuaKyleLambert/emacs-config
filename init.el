@@ -13,6 +13,8 @@
 (load "which-key-config.el")
 (load "ai.el") 
 (load "my-treesitter-config.el")
+(load "flycheck-config.el")
+(require 'flycheck-config)
 (require 'magit-config)
 
 

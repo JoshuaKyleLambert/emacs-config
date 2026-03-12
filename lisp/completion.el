@@ -14,4 +14,3 @@
         cider-completion-use-context t))
 
 (provide 'completion)
-
