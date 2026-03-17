@@ -1,0 +1,1 @@
+((top + -28) (left . 1680) (width . 218) (height . 73) (fullscreen) (maximized))
