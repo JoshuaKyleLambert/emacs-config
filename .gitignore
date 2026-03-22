@@ -34,3 +34,6 @@ transient/
 #Other directories
 projects
 tramp
+.lsp-session*
+.emacs.desktop
+frame-geometry.el
