@@ -52,7 +52,7 @@ Current load order from `init.el`:
 ## Dependencies
 
 Expected system tools:
-
+- `nerd fonts`
 - `git`
 - `clojure` (CLI)
 - `clj-kondo` (for Clojure linting in Flycheck)
@@ -70,7 +70,9 @@ Expected system tools:
 3. Start Emacs.
 4. If package metadata is stale, run:
    - `M-x package-refresh-contents`
-5. Restart Emacs if needed after first-time package installs.
+5. Install Nerd Fonts
+   - `M-x nerd-icons-install-fonts`
+6. Restart Emacs if needed after first-time package installs.
 
 Most missing Emacs packages are installed automatically via `use-package`.
 
@@ -81,7 +83,7 @@ Most missing Emacs packages are installed automatically via `use-package`.
 Install (official script):
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/clj-kondo/clj-kondo/master/script/install-clj-kondo)
+curl -s https://raw.githubusercontent.com/clj-kondo/clj-kondo/master/script/install-clj-kondo | sudo bash
 ```
 
 Verify in terminal:
