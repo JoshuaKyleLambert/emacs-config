@@ -15,6 +15,8 @@
 (load "ai.el") 
 (load "my-treesitter-config.el")
 (load "flycheck-config.el")
+(load "my-vterm-config.el")
+
 (require 'flycheck-config)
 (require 'magit-config)
 
