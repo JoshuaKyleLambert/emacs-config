@@ -17,9 +17,11 @@
 (load "flycheck-config.el")
 (load "my-vterm-config.el")
 
+(require 'session-config)
 (require 'flycheck-config)
 (require 'magit-config)
-
+(require 'treemacs-config)
+(require 'winner-config)
 
 
 (load "keybindings.el")
